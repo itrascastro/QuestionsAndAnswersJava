@@ -22,6 +22,12 @@ public class Examples {
         Examples.mostrar();
         Examples.buscar(8);
         Examples.buscarIndice(4);
+//        Examples.reemplazar(1, 0);
+//        Examples.mostrar();
+//        Examples.bordesA(1);
+//        Examples.mostrar();
+//        Examples.sumar();
+        Examples.sumarFilas();
     }
     
     public static void mostrar()
@@ -32,8 +38,11 @@ public class Examples {
             for (int j = 0; j < myArray.length; j++) {
                 System.out.print(myArray[i][j] + " ");
             }
+            //fin de fila i
             System.out.println();
         }
+        
+        System.out.println();
     }
     
     public static void buscar(int n)
@@ -81,5 +90,119 @@ public class Examples {
         }
     }
     
+    public static void reemplazar(int origen, int destino)
+    {
+        int[][] myArray = Examples.table;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (myArray[i][j] == origen) {
+                    myArray[i][j] = destino;
+                }
+            }
+        }
+    }
+    
+    public static void bordesA(int n)
+    {
+        int[][] myArray = Examples.table;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (i == 0 || i == 2 || j == 0 || j == 2) {
+                    myArray[i][j] = n;
+                }
+            }
+        }
+    }
+    
+    public static void diagonal(int n)
+    {
+        int[][] myArray = Examples.table;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (i == j) {
+                    myArray[i][j] = n;
+                }
+            }
+        }
+    }
+    
+    public static void fila(int fila, int n)
+    {
+        int[][] myArray = Examples.table;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (i == fila) {
+                    myArray[i][j] = n;
+                }
+            }
+        }
+    }
+    
+    public static void columna(int columna, int n)
+    {
+        int[][] myArray = Examples.table;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (j == columna) {
+                    myArray[i][j] = n;
+                }
+            }
+        }
+    }
+    
+    public static void sumar()
+    {
+        int[][] myArray = Examples.table;
+        
+        int suma = 0;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                suma = suma + myArray[i][j];
+            }
+        }
+        
+        System.out.println(suma);
+    }
+    
+    public static void sumarColumna(int col)
+    {
+        int[][] myArray = Examples.table;
+        
+        int suma = 0;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray.length; j++) {
+                if (j == col) {
+                    suma = suma + myArray[i][j];
+                }
+            }
+        }
+        
+        System.out.println(suma);
+    }
+    
+    public static void sumarFilas()
+    {
+        int[][] myArray = Examples.table;
+        
+        int suma = 0;
+        
+        for (int i = 0; i < myArray.length; i++) {
+            //Se empieza una fila
+            suma = 0;
+            for (int j = 0; j < myArray.length; j++) {
+                suma = suma + myArray[i][j];
+            }
+            //Se acaba la fila i
+            System.out.println("La suma de la fila " + i +
+                                " es igual a: " + suma);
+        }
+    }
     
 }

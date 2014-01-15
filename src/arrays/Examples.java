@@ -27,7 +27,7 @@ public class Examples {
 //        Examples.bordesA(1);
 //        Examples.mostrar();
 //        Examples.sumar();
-        Examples.sumarFilas();
+        Examples.sumarFilasColumnas();
     }
     
     public static void mostrar()
@@ -187,22 +187,26 @@ public class Examples {
         System.out.println(suma);
     }
     
-    public static void sumarFilas()
+    public static void sumarFilasColumnas()
     {
         int[][] myArray = Examples.table;
         
-        int suma = 0;
+        int sumaFila        = 0;
+        int sumaColumna     = 0;
         
         for (int i = 0; i < myArray.length; i++) {
-            //Se empieza una fila
-            suma = 0;
+            //Se empieza una fila o columna
+            sumaFila = 0;
+            sumaColumna = 0;
             for (int j = 0; j < myArray.length; j++) {
-                suma = suma + myArray[i][j];
+                sumaFila = sumaFila + myArray[i][j];
+                sumaColumna = sumaColumna + myArray[j][i];
             }
-            //Se acaba la fila i
+            //Se acaba la fila o columna
             System.out.println("La suma de la fila " + i +
-                                " es igual a: " + suma);
+                                " es igual a: " + sumaFila);
+            System.out.println("La suma de la columna " + i +
+                                " es igual a: " + sumaColumna);
         }
     }
-    
 }

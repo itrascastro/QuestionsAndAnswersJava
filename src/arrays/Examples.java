@@ -217,15 +217,16 @@ public class Examples {
     {
         int[] vector = Examples.vector;
         
-        int sumandos = 2;
-        int suma = 0;
-        
         for (int i = 0; i < vector.length; i++) {
             System.out.print(vector[i] + " ");
         }
         
         System.out.println();
         
+        int sumandos = 2;
+        int suma = 0;
+        
+        // we have to do length - 1 sums
         for (int i = 0; i < vector.length - 1; i++) {
             for (int j = 0; j < sumandos; j++) {
                 suma += vector[j];

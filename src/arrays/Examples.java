@@ -232,7 +232,7 @@ public class Examples {
                 suma += vector[j];
             }
             System.out.println("La suma de los " + sumandos + 
-                    " sumandos vale: " + suma);
+                    " primeros sumandos vale: " + suma);
             suma = 0;
             sumandos++;
         }

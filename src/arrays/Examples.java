@@ -17,6 +17,8 @@ public class Examples {
         {3, 5, 6}
     };
     
+    public static int[] vector = {0, 2, 4, 1, 0, 2};
+    
     public static void main(String[] args)
     {
         Examples.mostrar();
@@ -27,7 +29,8 @@ public class Examples {
 //        Examples.bordesA(1);
 //        Examples.mostrar();
 //        Examples.sumar();
-        Examples.sumarFilasColumnas();
+//        Examples.sumarFilasColumnas();
+        Examples.sumasParciales();
     }
     
     public static void mostrar()
@@ -207,6 +210,30 @@ public class Examples {
                                 " es igual a: " + sumaFila);
             System.out.println("La suma de la columna " + i +
                                 " es igual a: " + sumaColumna);
+        }
+    }
+    
+    public static void sumasParciales()
+    {
+        int[] vector = Examples.vector;
+        
+        int sumandos = 2;
+        int suma = 0;
+        
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(vector[i] + " ");
+        }
+        
+        System.out.println();
+        
+        for (int i = 0; i < vector.length - 1; i++) {
+            for (int j = 0; j < sumandos; j++) {
+                suma += vector[j];
+            }
+            System.out.println("La suma de los " + sumandos + 
+                    " sumandos vale: " + suma);
+            suma = 0;
+            sumandos++;
         }
     }
 }

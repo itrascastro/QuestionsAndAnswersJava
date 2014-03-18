@@ -18,6 +18,10 @@ public class Test
         
         d.lanzar();
         
+        d.setNumero(5);
+        
+        System.out.println(d.getNumero());
+        
         System.out.println(d);
     }
 }

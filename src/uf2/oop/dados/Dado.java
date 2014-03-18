@@ -15,19 +15,21 @@ import java.util.Random;
 public class Dado 
 {
     private int numero;
-
-    public Dado() 
+    
+    public Dado()
     {
     }
 
     public int getNumero() 
     {
-        return numero;
+        return this.numero;
     }
 
     public void setNumero(int numero) 
     {
-        this.numero = numero;
+        if (numero > 0 && numero < 7) {
+            this.numero = numero;
+        }
     }
     
     public void lanzar()

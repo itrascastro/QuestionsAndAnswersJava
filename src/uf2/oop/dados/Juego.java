@@ -20,6 +20,8 @@ public class Juego
     private int ronda;
     private Jugador ganador;
     
+    public static int NUM_RONDAS = 3;
+    
     public static void main(String[] args)
     {
         
@@ -35,6 +37,16 @@ public class Juego
         this.dado = new Dado();
         
         this.ronda = 1;
+    }
+    
+    public Jugador jugar()
+    {
+        for (int i=0; i < Juego.NUM_RONDAS; i++) {
+            jugador1.lanzar(this.dado);
+            jugador2.lanzar(this.dado);
+            jugador3.lanzar(this.dado);
+            jugador4.lanzar(this.dado);
+        }
     }
     
     

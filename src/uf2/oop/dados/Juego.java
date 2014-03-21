@@ -15,7 +15,6 @@ public class Juego
     private Jugador jugador1;
     private Jugador jugador2;
     private Jugador jugador3;
-    private Jugador jugador4;
     private Dado dado;
     private int ronda;
     private Jugador ganador;
@@ -27,12 +26,11 @@ public class Juego
         
     }
     
-    public Juego(String nombre1, String nombre2, String nombre3, String nombre4)
+    public Juego(String nombre1, String nombre2, String nombre3)
     {
         this.jugador1 = new Jugador(nombre1);
-        this.jugador1 = new Jugador(nombre2);
-        this.jugador1 = new Jugador(nombre3);
-        this.jugador1 = new Jugador(nombre4);
+        this.jugador2 = new Jugador(nombre2);
+        this.jugador3 = new Jugador(nombre3);
         
         this.dado = new Dado();
         
@@ -42,13 +40,49 @@ public class Juego
     public Jugador jugar()
     {
         for (int i=0; i < Juego.NUM_RONDAS; i++) {
-            jugador1.lanzar(this.dado);
-            jugador2.lanzar(this.dado);
-            jugador3.lanzar(this.dado);
-            jugador4.lanzar(this.dado);
+            this.jugador1.lanzar(this.dado);
+            this.jugador2.lanzar(this.dado);
+            this.jugador3.lanzar(this.dado);
+            
+            this.mejorTirada().setPuntuacion();
         }
+        
+        return this.mejorPuntuacion();
     }
     
+    private Jugador mejorTirada()
+    {
+        int p1 = this.jugador1.getValorTirada();
+        int p2 = this.jugador2.getValorTirada();
+        int p3 = this.jugador1.getValorTirada();
+        
+        if (p1 > p2 && p1 > p3) {
+            return this.jugador1;
+        }
+        
+        if (p2 > p1 && p2 > p3) {
+            return this.jugador2;
+        }
+        
+        return this.jugador3;
+    }
+    
+    private Jugador mejorPuntuacion()
+    {
+        int p1 = this.jugador1.getPuntuacion();
+        int p2 = this.jugador2.getPuntuacion();
+        int p3 = this.jugador1.getPuntuacion();
+        
+        if (p1 > p2 && p1 > p3) {
+            return this.jugador1;
+        }
+        
+        if (p2 > p1 && p2 > p3) {
+            return this.jugador2;
+        }
+        
+        return this.jugador3;
+    }
     
     
 }

@@ -52,4 +52,9 @@ public class Jugador
         dado.lanzar();
         this.valorTirada = dado.getNumero();
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "nombre=" + nombre + ", puntuacion=" + puntuacion + ", valorTirada=" + valorTirada + '}';
+    }
 }

@@ -23,7 +23,9 @@ public class Juego
     
     public static void main(String[] args)
     {
+        Juego juego = new Juego("Garnet", "Pearce", "Allen");
         
+        System.out.println(juego.jugar());
     }
     
     public Juego(String nombre1, String nombre2, String nombre3)

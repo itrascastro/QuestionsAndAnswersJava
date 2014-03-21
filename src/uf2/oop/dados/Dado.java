@@ -38,10 +38,9 @@ public class Dado
         
         this.numero = aleatorio.nextInt(6) + 1;
     }
-    
+
     @Override
-    public String toString()
-    {
-        return "Dado[" + this.numero + "]";
+    public String toString() {
+        return "Dado{" + "numero=" + numero + '}';
     }
 }

@@ -36,7 +36,6 @@ public class Juego
         
         this.dado = new Dado();
         
-        this.ronda = 1;
     }
     
     public Jugador jugar()
@@ -47,6 +46,7 @@ public class Juego
             this.jugador3.lanzar(this.dado);
             
             this.mejorTirada().setPuntuacion();
+            System.out.println(this);
         }
         
         return this.mejorPuntuacion();
@@ -56,7 +56,7 @@ public class Juego
     {
         int p1 = this.jugador1.getValorTirada();
         int p2 = this.jugador2.getValorTirada();
-        int p3 = this.jugador1.getValorTirada();
+        int p3 = this.jugador3.getValorTirada();
         
         if (p1 > p2 && p1 > p3) {
             return this.jugador1;
@@ -73,7 +73,7 @@ public class Juego
     {
         int p1 = this.jugador1.getPuntuacion();
         int p2 = this.jugador2.getPuntuacion();
-        int p3 = this.jugador1.getPuntuacion();
+        int p3 = this.jugador3.getPuntuacion();
         
         if (p1 > p2 && p1 > p3) {
             return this.jugador1;
@@ -85,6 +85,10 @@ public class Juego
         
         return this.jugador3;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Juego{" + "jugador1=" + jugador1 + ", jugador2=" + jugador2 + ", jugador3=" + jugador3 + ", dado=" + dado + ", ronda=" + ronda + ", ganador=" + ganador + '}';
+    }
     
 }

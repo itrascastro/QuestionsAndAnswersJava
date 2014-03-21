@@ -31,6 +31,10 @@ public class Juego
         this.jugador1 = new Jugador(nombre2);
         this.jugador1 = new Jugador(nombre3);
         this.jugador1 = new Jugador(nombre4);
+        
+        this.dado = new Dado();
+        
+        this.ronda = 1;
     }
     
     

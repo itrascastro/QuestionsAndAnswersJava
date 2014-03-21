@@ -14,11 +14,13 @@ public class Jugador
 {
     private String nombre;
     private int puntuacion;
+    private int valorTirada;
     
     public Jugador(String nombre)
     {
-        this.nombre     = nombre;
-        this.puntuacion = 0;
+        this.nombre         = nombre;
+        this.puntuacion     = 0;
+        this.valorTirada    = 0;
     }
 
     public String getNombre() {
@@ -36,9 +38,18 @@ public class Jugador
     public void setPuntuacion() {
         this.puntuacion++;
     }
+
+    public int getValorTirada() {
+        return valorTirada;
+    }
+
+    public void setValorTirada(int valorTirada) {
+        this.valorTirada = valorTirada;
+    }
     
     public void lanzar(Dado dado)
     {
         dado.lanzar();
+        this.valorTirada = dado.getNumero();
     }
 }

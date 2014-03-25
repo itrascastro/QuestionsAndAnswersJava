@@ -26,7 +26,10 @@ class Calculadora3
         this.resultado = resultado;
     }
     
-    
+    public void operar(int op1, int op2, int operacion)
+    {
+        
+    }
 
     @Override
     public String toString() {
@@ -35,9 +38,4 @@ class Calculadora3
                 '}';
     }
 
-    void operar(int op1, int op2, int operacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
 }

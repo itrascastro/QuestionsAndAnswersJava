@@ -35,7 +35,7 @@ public class Test
         System.out.println("Operando 2:");
         Test.op2 = teclado.nextInt();
         
-        Test.calculadora3();
+        Test.calculadora4();
     }
     
     public static void calculadora1() 
@@ -91,6 +91,29 @@ public class Test
         c.operar(Test.op1, Test.op2, Test.operacion);
         
         System.out.println(c);
+    }
+    
+    public static void calculadora4() 
+    {
+        int resultado = 0;
+        
+        switch (Test.operacion)
+        {
+            case 1:
+                resultado = Calculadora4.sumar(Test.op1, Test.op2);
+                break;
+            case 2:
+                resultado = Calculadora4.restar(Test.op1, Test.op2);
+                break;
+            case 3:
+                resultado = Calculadora4.multiplicar(Test.op1, Test.op2);
+                break;
+            case 4:
+                resultado = Calculadora4.dividir(Test.op1, Test.op2);
+                break;
+        }
+        
+        System.out.println(resultado);
     }
     
 }

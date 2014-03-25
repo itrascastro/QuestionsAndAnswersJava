@@ -35,14 +35,14 @@ public class Test
         System.out.println("Operando 2:");
         Test.op2 = teclado.nextInt();
         
-        Test.calculadora1();
+        Test.calculadora2();
     }
     
     public static void calculadora1() 
     {
         Calculadora c = new Calculadora(Test.op1, Test.op2);
         
-        switch (operacion)
+        switch (Test.operacion)
         {
             case 1:
                 c.sumar();
@@ -60,4 +60,28 @@ public class Test
         
         System.out.println(c.getResultado());
     }
+    
+    public static void calculadora2() 
+    {
+        Calculadora2 c = new Calculadora2();
+        
+        switch (Test.operacion)
+        {
+            case 1:
+                c.sumar(Test.op1, Test.op2);
+                break;
+            case 2:
+                c.restar(Test.op1, Test.op2);
+                break;
+            case 3:
+                c.multiplicar(Test.op1, Test.op2);
+                break;
+            case 4:
+                c.dividir(Test.op1, Test.op2);
+                break;
+        }
+        
+        System.out.println(c.getResultado());
+    }
+    
 }

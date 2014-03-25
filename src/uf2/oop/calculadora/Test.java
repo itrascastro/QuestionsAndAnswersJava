@@ -14,6 +14,10 @@ import java.util.Scanner;
  */
 public class Test 
 {
+    public static int op1;
+    public static int op2;
+    public static int operacion;
+    
     public static void main(String[] args)
     {
         Scanner teclado = new Scanner(System.in);
@@ -23,15 +27,20 @@ public class Test
         System.out.println("3. Multiplicar");
         System.out.println("4. Dividir");
         
-        int operacion = teclado.nextInt();
+        Test.operacion = teclado.nextInt();
         
         System.out.println("Operando 1:");
-        int op1 = teclado.nextInt();
+        Test.op1 = teclado.nextInt();
         
         System.out.println("Operando 2:");
-        int op2 = teclado.nextInt();
+        Test.op2 = teclado.nextInt();
         
-        Calculadora c = new Calculadora(op1, op2);
+        Test.calculadora1();
+    }
+    
+    public static void calculadora1() 
+    {
+        Calculadora c = new Calculadora(Test.op1, Test.op2);
         
         switch (operacion)
         {

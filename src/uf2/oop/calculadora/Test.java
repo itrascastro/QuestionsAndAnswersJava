@@ -35,7 +35,7 @@ public class Test
         System.out.println("Operando 2:");
         Test.op2 = teclado.nextInt();
         
-        Test.calculadora2();
+        Test.calculadora3();
     }
     
     public static void calculadora1() 
@@ -82,6 +82,15 @@ public class Test
         }
         
         System.out.println(c.getResultado());
+    }
+    
+    public static void calculadora3() 
+    {
+        Calculadora3 c = new Calculadora3();
+        
+        c.operar(Test.op1, Test.op2, Test.operacion);
+        
+        System.out.println(c);
     }
     
 }

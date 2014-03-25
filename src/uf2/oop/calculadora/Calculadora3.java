@@ -28,7 +28,21 @@ class Calculadora3
     
     public void operar(int op1, int op2, int operacion)
     {
-        
+        switch (operacion)
+        {
+            case 1:
+                this.resultado = op1 + op2;
+                break;
+            case 2:
+                this.resultado = op1 - op2;
+                break;
+            case 3:
+                this.resultado = op1 * op2;
+                break;
+            case 4:
+                this.resultado = op1 / op2;
+                break;
+        }
     }
 
     @Override

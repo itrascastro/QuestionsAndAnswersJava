@@ -35,7 +35,7 @@ public class Test
         System.out.println("Operando 2:");
         Test.op2 = teclado.nextInt();
         
-        Test.calculadora4();
+        Test.calculadora1();
     }
     
     public static void calculadora1() 
@@ -58,7 +58,7 @@ public class Test
                 break;
         }
         
-        System.out.println(c.getResultado());
+        System.out.println(c);
     }
     
     public static void calculadora2() 

@@ -22,7 +22,7 @@ public class Cuadrado
     }
 
     public int getLado() {
-        return lado;
+        return this.lado;
     }
 
     public void setLado(int lado) {
@@ -30,7 +30,7 @@ public class Cuadrado
     }
 
     public Punto getOrigen() {
-        return origen;
+        return this.origen;
     }
 
     public void setOrigen(Punto origen) {

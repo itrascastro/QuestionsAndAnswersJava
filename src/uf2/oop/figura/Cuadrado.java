@@ -42,4 +42,29 @@ public class Cuadrado
         return "Cuadrado{" + "lado=" + lado + ", origen=" + origen + '}';
     }
     
+    public boolean iguales(Cuadrado c)
+    {
+        return this.lado == c.getLado() && this.origen.iguales(c.getOrigen());
+    }
+    
+    public void desplazar(Punto p)
+    {
+        this.origen.desplazar(p);
+    }
+    
+    public double area()
+    {
+        return Math.pow(this.lado, 2);
+    }
+    
+    public int perimetro()
+    {
+        return this.lado * 4;
+    }
+    
+    public void escalar(int n)
+    {
+        this.lado = this.lado + n;
+    }
+    
 }

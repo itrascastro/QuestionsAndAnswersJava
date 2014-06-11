@@ -30,6 +30,48 @@ public class Rectangulo {
         this.v3 = v3;
         this.v4 = v4;
     }
+
+    public Punto getV1() {
+        return v1;
+    }
+
+    public void setV1(Punto v1) {
+        this.v1 = v1;
+    }
+
+    public Punto getV2() {
+        return v2;
+    }
+
+    public void setV2(Punto v2) {
+        this.v2 = v2;
+    }
+
+    public Punto getV3() {
+        return v3;
+    }
+
+    public void setV3(Punto v3) {
+        this.v3 = v3;
+    }
+
+    public Punto getV4() {
+        return v4;
+    }
+
+    public void setV4(Punto v4) {
+        this.v4 = v4;
+    }
+    
+    public boolean valido() {
+        if (this.v1.distancia(this.v2) != this.v3.distancia(this.v4) || 
+            this.v1.distancia(this.v4) != this.v2.distancia(this.v3))
+        {
+            return false;
+        }
+        
+        return true;
+    }
     
     public double area() {
         return this.v1.distancia(this.v2) * this.v1.distancia(v4);
@@ -50,6 +92,17 @@ public class Rectangulo {
         this.v2.desplazar(p);
         this.v3.desplazar(p);
         this.v4.desplazar(p);
+    }
+    
+    public boolean iguales(Rectangulo r2) {
+        return this.v1.distancia(this.v2) == r2.getV1().distancia(r2.getV2()) &&
+               this.v1.distancia(this.v4) == r2.getV1().distancia(r2.getV4()) ;
+    }
+    
+    public void escalar(int n) {
+        this.v2.desplazar(new Punto(n, 0));
+        this.v3.desplazar(new Punto(n, n));
+        this.v4.desplazar(new Punto(0, n));
     }
     
 }

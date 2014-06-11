@@ -30,5 +30,7 @@ public class TestRectangulo {
         System.out.println(TestRectangulo.r);
         TestRectangulo.r.desplazar(new Punto(5,0));
         System.out.println(TestRectangulo.r);
+        TestRectangulo.r.escalar(2);
+        System.out.println(TestRectangulo.r);
     }
 }

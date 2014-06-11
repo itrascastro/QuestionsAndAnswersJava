@@ -16,10 +16,10 @@ public class TestRectangulo {
     public static void main(String[] args) throws Exception {
         try {
             TestRectangulo.r = new Rectangulo(
-                new Punto(0,0),
-                new Punto(4,0),
-                new Punto(4,2),
-                new Punto(0,2)
+                new Punto(-1,0),
+                new Punto(2,0),
+                new Punto(2,2),
+                new Punto(-1,2)
             );
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -31,6 +31,8 @@ public class TestRectangulo {
         TestRectangulo.r.desplazar(new Punto(5,0));
         System.out.println(TestRectangulo.r);
         TestRectangulo.r.escalar(2);
+        System.out.println(TestRectangulo.r);
+        TestRectangulo.r.girar();
         System.out.println(TestRectangulo.r);
     }
 }

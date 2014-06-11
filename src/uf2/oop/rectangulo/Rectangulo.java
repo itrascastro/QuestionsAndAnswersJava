@@ -105,4 +105,13 @@ public class Rectangulo {
         this.v4.desplazar(new Punto(0, n));
     }
     
+    public void girar() {
+        Punto newV2 = new Punto(this.v4.getY(), this.v1.getY());
+        Punto newV3 = new Punto(newV2.getX(), -this.v3.getX());
+        Punto newV4 = new Punto(this.v1.getX(), -this.v3.getX());
+        
+        this.v2 = newV2;
+        this.v3 = newV3;
+        this.v4 = newV4;
+    }
 }

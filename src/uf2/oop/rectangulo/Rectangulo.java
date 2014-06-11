@@ -38,4 +38,18 @@ public class Rectangulo {
     public double perimetro() {
         return v1.distancia(v2) * 2 + v1.distancia(v4) * 2;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangulo{" + "v1=" + v1 + ", v2=" + v2 + ", v3=" + v3 + ", "
+                + "v4=" + v4 + '}';
+    }
+    
+    public void desplazar(Punto p) {
+        this.v1.desplazar(p);
+        this.v2.desplazar(p);
+        this.v3.desplazar(p);
+        this.v4.desplazar(p);
+    }
+    
 }

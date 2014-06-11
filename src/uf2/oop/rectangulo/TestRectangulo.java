@@ -27,6 +27,8 @@ public class TestRectangulo {
         
         System.out.println("Área: " + TestRectangulo.r.area());
         System.out.println("Perímetro: " + TestRectangulo.r.perimetro());
-        
+        System.out.println(TestRectangulo.r);
+        TestRectangulo.r.desplazar(new Punto(5,0));
+        System.out.println(TestRectangulo.r);
     }
 }

@@ -6,21 +6,37 @@
 
 package uf1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ismael trascastro
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        int n1 = 4;
-        int n2 = 5;
+        Scanner teclado = new Scanner(System.in);
         
+        int n1;
+        int n2;
         int resultado;
         
-        resultado = n1 + n2;
+        System.out.println("Introduce el primer número: ");
+        n1 = teclado.nextInt();
         
-        System.out.println("El resultado es: " + resultado);
+        System.out.println("Introduce el segundo número: ");
+        n2 = teclado.nextInt();
         
-        n1 = 8;
+        System.out.println("Introduce el resultado de la suma: ");
+        resultado = teclado.nextInt();
+        
+        int suma = n1 + n2;
+        
+        if (suma == resultado) {
+            System.out.println("Correcto!");
+        } else {
+            System.out.println("Error");
+        }
+        
+        
     }
 }

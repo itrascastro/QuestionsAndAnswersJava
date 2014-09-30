@@ -10,6 +10,9 @@ Ahora ejecutamos:
 
 $java -cp ./ uf1.HelloWorld
 
+---------------------
+more info: http://stackoverflow.com/questions/14132602/exception-in-thread-main-java-lang-noclassdeffounderror-helloworld
+
 _________________________
 
 Lo anterior es cuando usamos paquetes, si no hubieramos usado paquetes bastaría con lo siguiente:

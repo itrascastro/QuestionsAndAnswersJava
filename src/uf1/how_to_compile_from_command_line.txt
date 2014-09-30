@@ -1,0 +1,19 @@
+Usando la línea de comandos compilaremos y ejecutaremos nuestro programa:
+
+Para ello nos situamos en la carpeta que contiene nuestro paquete (no en la carpeta del paquete).
+
+$javac uf1/*.java
+
+Se habrá creado un fichero HelloWorld.class a partir de nuestro código HelloWorld.java
+
+Ahora ejecutamos:
+
+$java -cp ./ uf1.HelloWorld
+
+_________________________
+
+Lo anterior es cuando usamos paquetes, si no hubieramos usado paquetes bastaría con lo siguiente:
+
+$javac HelloWorld.java
+
+$java HelloWorld

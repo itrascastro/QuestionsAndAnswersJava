@@ -33,6 +33,21 @@ public class Examples {
         Examples.sumasParciales();
     }
     
+    public static int max()
+    {
+        int[] vector = Examples.vector;
+        
+        int maximo = vector[0];
+        
+        for (int i = 1; i < vector.length; i++) {
+            if (vector[i] > maximo) {
+                maximo = vector[i];
+            }
+        }
+        
+        return maximo;
+    }
+    
     public static void mostrar()
     {
         int[][] myArray = Examples.table;
